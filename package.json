@@ -5,7 +5,7 @@
     "main": "main.js",
     "scripts": {
         "start": "electron .",
-        "install": "electron-rebuild"
+        "install-x": "electron-rebuild --verbose"
     },
     "repository": {
         "type": "git",
@@ -25,6 +25,7 @@
         "electron-rebuild": "^1.8.5"
     },
     "dependencies": {
+        "bindings": "^1.5.0",
         "data-table": "^2.0.0",
         "serialport": "^7.1.5"
     }
