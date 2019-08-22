@@ -21,8 +21,10 @@
     "author": "GitHub",
     "license": "CC0-1.0",
     "devDependencies": {
-        "electron": "^5.0.5",
-        "electron-rebuild": "^1.8.5"
+        "electron": "^4.2.5",
+        "electron-rebuild": "^1.8.5",
+        "node-abi": "^2.11.0",
+        "prebuild-install": "^5.3.0"
     },
     "dependencies": {
         "bindings": "^1.5.0",
