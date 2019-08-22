@@ -40,6 +40,12 @@ Includes support for electron/node versions:
    - darwin  , x64 , .\native_modules\@serialport\bindings\lib\binding\node-v69-darwin-x64\bindings.node
    - linux   , x64 , .\native_modules\@serialport\bindings\lib\binding\node-v69-linux-x64\bindings.node
    - linux   , ia32, .\native_modules\@serialport\bindings\lib\binding\node-v69-linux-ia32\bindings.node
+* electron 5.0.5 uses ABI 70
+   - win32   , x64 , .\native_modules\@serialport\bindings\lib\binding\node-v70-win32-x64\bindings.node
+   - win32   , ia32, .\native_modules\@serialport\bindings\lib\binding\node-v70-win32-ia32\bindings.node
+   - darwin  , x64 , .\native_modules\@serialport\bindings\lib\binding\node-v70-darwin-x64\bindings.node
+   - linux   , x64 , .\native_modules\@serialport\bindings\lib\binding\node-v70-linux-x64\bindings.node
+   - linux   , ia32, .\native_modules\@serialport\bindings\lib\binding\node-v70-linux-ia32\bindings.node
 * node 10.15.1 uses ABI 64
    - win32   , x64 , .\native_modules\@serialport\bindings\compiled\10.15.1\win32\x64\bindings.node
    - win32   , ia32, .\native_modules\@serialport\bindings\compiled\10.15.1\win32\ia32\bindings.node
