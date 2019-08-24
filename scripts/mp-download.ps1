@@ -148,15 +148,8 @@ function DownloadPrebuild {
     # todo: add error chcking to set-location 
     Set-Location $module_folder
     try {
+        write-host "npx prebuild-install --runtime $runtime --target $version --arch $arch --platform $platform --tag-prefix $prefix --verbose"
         npx prebuild-install --runtime $runtime --target $version --arch $arch --platform $platform --tag-prefix $prefix --verbose
-        # if ($IsWindows) {
-        #     # &".\node_modules\.bin\prebuild-install.cmd" --runtime $runtime --target $version --arch $arch --platform $platform --tag-prefix $prefix
-        #     &"$root_folder\node_modules\.bin\prebuild-install.cmd" --runtime $runtime --target $version --arch $arch --platform $platform --tag-prefix $prefix
-        # } else {
-        #     # linux / mac : same command , slightly different path
-        #     node_modules/.bin/prebuild-install --runtime $runtime --target $version --arch $arch --platform $platform --tag-prefix $prefix
-        #     &"$root_folder/node_modules/.bin/prebuild-install" --runtime $runtime --target $version --arch $arch --platform $platform --tag-prefix $prefix
-        # }
     }  catch {
         Write-Error "Unable to run prebuild-install. Did you run 'npm add prebuild-install --save-dev ?'" 
     }
@@ -256,44 +249,46 @@ if ( $copyonly ) {
     } else {
         "Includes support for electron/node versions:" | Out-File -filepath $docs_file 
     }
+    #todo: read electron version from package.json
+
 
     # Read target vscode version 
 
-    try {
-        $version = $package.engines.vscode.Replace('^','')
-        if ($version -notin $VSCodeVersions) {
-            Write-Host -F Blue "Add VSCode [$version] version from package.json"
-            $VSCodeVersions = $VSCodeVersions + $version
+    # try {
+    #     $version = $package.engines.vscode.Replace('^','')
+    #     if ($version -notin $VSCodeVersions) {
+    #         Write-Host -F Blue "Add VSCode [$version] version from package.json"
+    #         $VSCodeVersions = $VSCodeVersions + $version
             
-        }
-    } catch {
-        Write-Warning 'No vscode engine version found'
-    }
+    #     }
+    # } catch {
+    #     Write-Warning 'No vscode engine version found'
+    # }
 
-    #Add support for all newer vscode versions based on date ?
-    foreach($version in (RecentVSCodeVersions -Last 3) ){
-        if ($version -notin $VSCodeVersions) {
-            Write-Host -F Blue "Add recent VSCode [$version] version"
-            $VSCodeVersions = $VSCodeVersions + $version
-        }
-    }
+    # #Add support for all newer vscode versions based on date ?
+    # foreach($version in (RecentVSCodeVersions -Last 3) ){
+    #     if ($version -notin $VSCodeVersions) {
+    #         Write-Host -F Blue "Add recent VSCode [$version] version"
+    #         $VSCodeVersions = $VSCodeVersions + $version
+    #     }
+    # }
 
-    # get/add electron versions for all relevant vscode versions 
-    foreach ($tag in $VSCodeVersions ){
-        $version = ReadVsCodeElectronVersion -GitTag $tag
-        if ($version) {
-            # Add to documentation
-            $ABI_ver = getABI 'electron' $version
-            "* VSCode [$tag] uses Electron $version , ABI: $ABI_ver"| Out-File -filepath $docs_file -Append
+    # # get/add electron versions for all relevant vscode versions 
+    # foreach ($tag in $VSCodeVersions ){
+    #     $version = ReadVsCodeElectronVersion -GitTag $tag
+    #     if ($version) {
+    #         # Add to documentation
+    #         $ABI_ver = getABI 'electron' $version
+    #         "* VSCode [$tag] uses Electron $version , ABI: $ABI_ver"| Out-File -filepath $docs_file -Append
 
-            if ( "electron-$version" -in $VersionList ) {
-                Write-Host -F Green "VSCode [$tag] uses a known version of Electron: $version , ABI: $ABI_ver"
-            }else {
-                Write-Host -F Blue "VSCode [$tag] uses an additional version of Electron: $version ABI: $ABI_ver, that will be used/added to the prebuild versions to download"
-                $VersionList=$VersionList + "electron-$version" 
-            } 
-        }
-    }
+    #         if ( "electron-$version" -in $VersionList ) {
+    #             Write-Host -F Green "VSCode [$tag] uses a known version of Electron: $version , ABI: $ABI_ver"
+    #         }else {
+    #             Write-Host -F Blue "VSCode [$tag] uses an additional version of Electron: $version ABI: $ABI_ver, that will be used/added to the prebuild versions to download"
+    #             $VersionList=$VersionList + "electron-$version" 
+    #         } 
+    #     }
+    # }
     # sort the list 
     if ($VersionList.Count){
         $VersionList= $VersionList | Sort-Object
@@ -360,7 +355,7 @@ if ( $copyonly ) {
                         # make sure the containing folder exists
                         new-item (split-Path $dest_file -Parent) -ItemType Directory -ErrorAction SilentlyContinue | Out-Null
                         # cope all *.node native bindings
-                        $_ = Copy-Item ".\node_modules\$module_name\build\Release\*.node" $dest_file -Force 
+                        $_ = Copy-Item ".\node_modules\$module_name\build\Release\*.node" $dest_file -Force -Verbose
                         Write-Host " -> $dest_file"
                         # add to documentation.md
                         $msg = "   - {0,-8}, {1,-4}, {2}" -f $platform, $arch , ($dest_file.Replace($root_folder,'.'))

@@ -1,0 +1,157 @@
+PS C:\develop\NodeJS\electron-serialport> .\scripts\mp-download.ps1 -Clean -ElectronVersions '3.1.10','5.0.10','6.0.0' -IgnoreNodeVersion
+Cleanup the native_modules folder
+electron 3.1.10 uses ABI 64
+electron 5.0.10 uses ABI 70
+electron 6.0.0 uses ABI 73
+Download prebuild native binding for runtime electron : 3.1.10, abi: 64, win32, x64
+npx prebuild-install --runtime electron --target 3.1.10 --arch x64 --platform win32 --tag-prefix @serialport/bindings@ --verbose
+prebuild-install info begin Prebuild-install version 5.3.0
+prebuild-install info looking for cached prebuild @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\8001b3-bindings-v2.0.8-electron-v64-win32-x64.tar.gz
+prebuild-install http request GET https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v64-win32-x64.tar.gz
+prebuild-install http 200 https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v64-win32-x64.tar.gz
+prebuild-install info downloading to @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\8001b3-bindings-v2.0.8-electron-v64-win32-x64.tar.gz.21744-497941637cd04.tmp
+prebuild-install info renaming to @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\8001b3-bindings-v2.0.8-electron-v64-win32-x64.tar.gz
+prebuild-install info unpacking @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\8001b3-bindings-v2.0.8-electron-v64-win32-x64.tar.gz
+prebuild-install info unpack resolved to C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\build\Release\bindings.node
+prebuild-install info install Successfully installed prebuilt binary!
+VERBOSE: Performing the operation "Copy File" on target "Item: C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\build\Release\bindings.node Destination: C:\develop\NodeJS\electron-serialport\native_modules\@serialport\bindings\lib\binding\node-v64-win32-x64\bindings.node".
+ -> C:\develop\NodeJS\electron-serialport\native_modules\@serialport\bindings\lib\binding\node-v64-win32-x64\bindings.node
+Download prebuild native binding for runtime electron : 3.1.10, abi: 64, win32, ia32
+npx prebuild-install --runtime electron --target 3.1.10 --arch ia32 --platform win32 --tag-prefix @serialport/bindings@ --verbose
+prebuild-install info begin Prebuild-install version 5.3.0
+prebuild-install info looking for cached prebuild @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\4c4363-bindings-v2.0.8-electron-v64-win32-ia32.tar.gz
+prebuild-install http request GET https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v64-win32-ia32.tar.gz
+prebuild-install http 200 https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v64-win32-ia32.tar.gz
+prebuild-install info downloading to @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\4c4363-bindings-v2.0.8-electron-v64-win32-ia32.tar.gz.20524-e347d4d54bf18.tmp
+prebuild-install info renaming to @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\4c4363-bindings-v2.0.8-electron-v64-win32-ia32.tar.gz
+prebuild-install info unpacking @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\4c4363-bindings-v2.0.8-electron-v64-win32-ia32.tar.gz
+prebuild-install info unpack resolved to C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\build\Release\bindings.node
+prebuild-install info install Successfully installed prebuilt binary!
+VERBOSE: Performing the operation "Copy File" on target "Item: C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\build\Release\bindings.node Destination: C:\develop\NodeJS\electron-serialport\native_modules\@serialport\bindings\lib\binding\node-v64-win32-ia32\bindings.node".
+ -> C:\develop\NodeJS\electron-serialport\native_modules\@serialport\bindings\lib\binding\node-v64-win32-ia32\bindings.node
+Download prebuild native binding for runtime electron : 3.1.10, abi: 64, darwin, x64
+npx prebuild-install --runtime electron --target 3.1.10 --arch x64 --platform darwin --tag-prefix @serialport/bindings@ --verbose
+prebuild-install info begin Prebuild-install version 5.3.0
+prebuild-install info looking for cached prebuild @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\5707b4-bindings-v2.0.8-electron-v64-darwin-x64.tar.gz
+prebuild-install http request GET https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v64-darwin-x64.tar.gz
+prebuild-install http 200 https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v64-darwin-x64.tar.gz
+prebuild-install info downloading to @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\5707b4-bindings-v2.0.8-electron-v64-darwin-x64.tar.gz.8800-074a72fb268e6.tmp
+prebuild-install info renaming to @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\5707b4-bindings-v2.0.8-electron-v64-darwin-x64.tar.gz
+prebuild-install info unpacking @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\5707b4-bindings-v2.0.8-electron-v64-darwin-x64.tar.gz
+prebuild-install info unpack resolved to C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\build\Release\bindings.node
+prebuild-install info install Successfully installed prebuilt binary!
+VERBOSE: Performing the operation "Copy File" on target "Item: C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\build\Release\bindings.node Destination: C:\develop\NodeJS\electron-serialport\native_modules\@serialport\bindings\lib\binding\node-v64-darwin-x64\bindings.node".
+ -> C:\develop\NodeJS\electron-serialport\native_modules\@serialport\bindings\lib\binding\node-v64-darwin-x64\bindings.node
+Download prebuild native binding for runtime electron : 3.1.10, abi: 64, darwin, ia32
+Download prebuild native binding for runtime electron : 3.1.10, abi: 64, linux, x64
+npx prebuild-install --runtime electron --target 3.1.10 --arch x64 --platform linux --tag-prefix @serialport/bindings@ --verbose
+prebuild-install info begin Prebuild-install version 5.3.0
+prebuild-install info looking for cached prebuild @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\d52d5f-bindings-v2.0.8-electron-v64-linux-x64.tar.gz
+prebuild-install http request GET https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v64-linux-x64.tar.gz
+prebuild-install http 200 https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v64-linux-x64.tar.gz
+prebuild-install info downloading to @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\d52d5f-bindings-v2.0.8-electron-v64-linux-x64.tar.gz.3524-22aa546f111d5.tmp
+prebuild-install info renaming to @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\d52d5f-bindings-v2.0.8-electron-v64-linux-x64.tar.gz
+prebuild-install info unpacking @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\d52d5f-bindings-v2.0.8-electron-v64-linux-x64.tar.gz
+prebuild-install info unpack resolved to C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\build\Release\bindings.node
+prebuild-install info install Successfully installed prebuilt binary!
+VERBOSE: Performing the operation "Copy File" on target "Item: C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\build\Release\bindings.node Destination: C:\develop\NodeJS\electron-serialport\native_modules\@serialport\bindings\lib\binding\node-v64-linux-x64\bindings.node".
+ -> C:\develop\NodeJS\electron-serialport\native_modules\@serialport\bindings\lib\binding\node-v64-linux-x64\bindings.node
+Download prebuild native binding for runtime electron : 3.1.10, abi: 64, linux, ia32
+npx prebuild-install --runtime electron --target 3.1.10 --arch ia32 --platform linux --tag-prefix @serialport/bindings@ --verbose
+prebuild-install info begin Prebuild-install version 5.3.0
+prebuild-install info looking for cached prebuild @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\e5a58e-bindings-v2.0.8-electron-v64-linux-ia32.tar.gz
+prebuild-install http request GET https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v64-linux-ia32.tar.gz
+prebuild-install http 200 https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v64-linux-ia32.tar.gz
+prebuild-install info downloading to @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\e5a58e-bindings-v2.0.8-electron-v64-linux-ia32.tar.gz.13416-e3853647bd3a4.tmp
+prebuild-install info renaming to @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\e5a58e-bindings-v2.0.8-electron-v64-linux-ia32.tar.gz
+prebuild-install info unpacking @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\e5a58e-bindings-v2.0.8-electron-v64-linux-ia32.tar.gz
+prebuild-install info unpack resolved to C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\build\Release\bindings.node
+prebuild-install info install Successfully installed prebuilt binary!
+VERBOSE: Performing the operation "Copy File" on target "Item: C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\build\Release\bindings.node Destination: C:\develop\NodeJS\electron-serialport\native_modules\@serialport\bindings\lib\binding\node-v64-linux-ia32\bindings.node".
+ -> C:\develop\NodeJS\electron-serialport\native_modules\@serialport\bindings\lib\binding\node-v64-linux-ia32\bindings.node
+Download prebuild native binding for runtime electron : 5.0.10, abi: 70, win32, x64
+npx prebuild-install --runtime electron --target 5.0.10 --arch x64 --platform win32 --tag-prefix @serialport/bindings@ --verbose
+prebuild-install info begin Prebuild-install version 5.3.0
+prebuild-install info looking for cached prebuild @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\bde028-bindings-v2.0.8-electron-v70-win32-x64.tar.gz
+prebuild-install http request GET https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v70-win32-x64.tar.gz
+prebuild-install http 200 https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v70-win32-x64.tar.gz
+prebuild-install info downloading to @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\bde028-bindings-v2.0.8-electron-v70-win32-x64.tar.gz.16608-da68a1f0e84a4.tmp
+prebuild-install info renaming to @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\bde028-bindings-v2.0.8-electron-v70-win32-x64.tar.gz
+prebuild-install info unpacking @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\bde028-bindings-v2.0.8-electron-v70-win32-x64.tar.gz
+prebuild-install info unpack resolved to C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\build\Release\bindings.node
+prebuild-install info install Successfully installed prebuilt binary!
+VERBOSE: Performing the operation "Copy File" on target "Item: C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\build\Release\bindings.node Destination: C:\develop\NodeJS\electron-serialport\native_modules\@serialport\bindings\lib\binding\node-v70-win32-x64\bindings.node".
+ -> C:\develop\NodeJS\electron-serialport\native_modules\@serialport\bindings\lib\binding\node-v70-win32-x64\bindings.node
+Download prebuild native binding for runtime electron : 5.0.10, abi: 70, win32, ia32
+npx prebuild-install --runtime electron --target 5.0.10 --arch ia32 --platform win32 --tag-prefix @serialport/bindings@ --verbose
+prebuild-install info begin Prebuild-install version 5.3.0
+prebuild-install info looking for cached prebuild @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\85c6e0-bindings-v2.0.8-electron-v70-win32-ia32.tar.gz
+prebuild-install http request GET https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v70-win32-ia32.tar.gz
+prebuild-install http 200 https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v70-win32-ia32.tar.gz
+prebuild-install info downloading to @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\85c6e0-bindings-v2.0.8-electron-v70-win32-ia32.tar.gz.19892-0b549fa534b03.tmp
+prebuild-install info renaming to @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\85c6e0-bindings-v2.0.8-electron-v70-win32-ia32.tar.gz
+prebuild-install info unpacking @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\85c6e0-bindings-v2.0.8-electron-v70-win32-ia32.tar.gz
+prebuild-install info unpack resolved to C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\build\Release\bindings.node
+prebuild-install info install Successfully installed prebuilt binary!
+VERBOSE: Performing the operation "Copy File" on target "Item: C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\build\Release\bindings.node Destination: C:\develop\NodeJS\electron-serialport\native_modules\@serialport\bindings\lib\binding\node-v70-win32-ia32\bindings.node".
+ -> C:\develop\NodeJS\electron-serialport\native_modules\@serialport\bindings\lib\binding\node-v70-win32-ia32\bindings.node
+Download prebuild native binding for runtime electron : 5.0.10, abi: 70, darwin, x64
+npx prebuild-install --runtime electron --target 5.0.10 --arch x64 --platform darwin --tag-prefix @serialport/bindings@ --verbose
+prebuild-install info begin Prebuild-install version 5.3.0
+prebuild-install info looking for cached prebuild @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\4fb751-bindings-v2.0.8-electron-v70-darwin-x64.tar.gz
+prebuild-install http request GET https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v70-darwin-x64.tar.gz
+prebuild-install http 200 https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v70-darwin-x64.tar.gz
+prebuild-install info downloading to @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\4fb751-bindings-v2.0.8-electron-v70-darwin-x64.tar.gz.11632-2aa3dadf64abd.tmp
+prebuild-install info renaming to @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\4fb751-bindings-v2.0.8-electron-v70-darwin-x64.tar.gz
+prebuild-install info unpacking @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\4fb751-bindings-v2.0.8-electron-v70-darwin-x64.tar.gz
+prebuild-install info unpack resolved to C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\build\Release\bindings.node
+prebuild-install info install Successfully installed prebuilt binary!
+VERBOSE: Performing the operation "Copy File" on target "Item: C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\build\Release\bindings.node Destination: C:\develop\NodeJS\electron-serialport\native_modules\@serialport\bindings\lib\binding\node-v70-darwin-x64\bindings.node".
+ -> C:\develop\NodeJS\electron-serialport\native_modules\@serialport\bindings\lib\binding\node-v70-darwin-x64\bindings.node
+Download prebuild native binding for runtime electron : 5.0.10, abi: 70, darwin, ia32
+Download prebuild native binding for runtime electron : 5.0.10, abi: 70, linux, x64
+npx prebuild-install --runtime electron --target 5.0.10 --arch x64 --platform linux --tag-prefix @serialport/bindings@ --verbose
+prebuild-install info begin Prebuild-install version 5.3.0
+prebuild-install info looking for cached prebuild @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\66091f-bindings-v2.0.8-electron-v70-linux-x64.tar.gz
+prebuild-install http request GET https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v70-linux-x64.tar.gz
+prebuild-install http 200 https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v70-linux-x64.tar.gz
+prebuild-install http 200 https://github.com/node-serialport/node-serialport/releases/download/@serialport/bindings@2.0.8/bindings-v2.0.8-electron-v70-linux-ia32.tar.gz
+prebuild-install info downloading to @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\7e38c6-bindings-v2.0.8-electron-v70-linux-ia32.tar.gz.9984-26fb557c13895.tmp
+prebuild-install info renaming to @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\7e38c6-bindings-v2.0.8-electron-v70-linux-ia32.tar.gz
+prebuild-install info unpacking @ C:\Users\josverl\AppData\Roaming\npm-cache\_prebuilds\7e38c6-bindings-v2.0.8-electron-v70-linux-ia32.tar.gz
+prebuild-install info unpack resolved to C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\build\Release\bindings.node
+prebuild-install info install Successfully installed prebuilt binary!
+VERBOSE: Performing the operation "Copy File" on target "Item: C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\build\Release\bindings.node Destination: C:\develop\NodeJS\electron-serialport\native_modules\@serialport\bindings\lib\binding\node-v70-linux-ia32\bindings.node".
+ -> C:\develop\NodeJS\electron-serialport\native_modules\@serialport\bindings\lib\binding\node-v70-linux-ia32\bindings.node
+Download prebuild native binding for runtime electron : 6.0.0, abi: 73, win32, x64
+npx prebuild-install --runtime electron --target 6.0.0 --arch x64 --platform win32 --tag-prefix @serialport/bindings@ --verbose
+Could not detect abi for version 6.0.0 and runtime electron.  Updating "node-abi" might help solve this issue if it is a new release of electron
+Download prebuild native binding for runtime electron : 6.0.0, abi: 73, win32, ia32
+npx prebuild-install --runtime electron --target 6.0.0 --arch ia32 --platform win32 --tag-prefix @serialport/bindings@ --verbose
+Could not detect abi for version 6.0.0 and runtime electron.  Updating "node-abi" might help solve this issue if it is a new release of electron
+Download prebuild native binding for runtime electron : 6.0.0, abi: 73, darwin, x64
+npx prebuild-install --runtime electron --target 6.0.0 --arch x64 --platform darwin --tag-prefix @serialport/bindings@ --verbose
+Could not detect abi for version 6.0.0 and runtime electron.  Updating "node-abi" might help solve this issue if it is a new release of electron
+Download prebuild native binding for runtime electron : 6.0.0, abi: 73, darwin, ia32
+Download prebuild native binding for runtime electron : 6.0.0, abi: 73, linux, x64
+npx prebuild-install --runtime electron --target 6.0.0 --arch x64 --platform linux --tag-prefix @serialport/bindings@ --verbose
+Could not detect abi for version 6.0.0 and runtime electron.  Updating "node-abi" might help solve this issue if it is a new release of electron
+Download prebuild native binding for runtime electron : 6.0.0, abi: 73, linux, ia32
+npx prebuild-install --runtime electron --target 6.0.0 --arch ia32 --platform linux --tag-prefix @serialport/bindings@ --verbose
+Could not detect abi for version 6.0.0 and runtime electron.  Updating "node-abi" might help solve this issue if it is a new release of electron
+
+Cleaned the 'C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings/build/release' folder, to prevent including and break cross-platform portability.
+Copy all /native_modules into the /node_modules for cross platform packaging
+C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\lib\binding\node-v64-darwin-x64
+C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\lib\binding\node-v64-linux-ia32
+C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\lib\binding\node-v64-linux-x64
+C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\lib\binding\node-v64-win32-ia32
+C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\lib\binding\node-v64-win32-x64
+C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\lib\binding\node-v70-darwin-x64
+C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\lib\binding\node-v70-linux-ia32
+C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\lib\binding\node-v70-linux-x64
+C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\lib\binding\node-v70-win32-ia32
+C:\develop\NodeJS\electron-serialport\node_modules\@serialport\bindings\lib\binding\node-v70-win32-x64
+C:\develop\NodeJS\electron-serialport\node_modules
+Platform bindings are listed in: C:\develop\NodeJS\electron-serialport\native_modules\included_runtimes.md
+PS C:\develop\NodeJS\electron-serialport>

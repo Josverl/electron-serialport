@@ -1,0 +1,2 @@
+ABI 64 <- native_modules/@serialport/bindings/lib/binding/node-v64-linux-x64/bindings.node
+ABI 47 <- native_modules/@serialport/bindings/lib/binding/node-v70-linux-x64/bindings.node
