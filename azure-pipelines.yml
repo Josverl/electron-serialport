@@ -49,9 +49,10 @@ steps:
   displayName: 'npm install'
 
 - script: |
-    npm run version
-    npm run test
-  displayName: 'npm run test'
+    ./node_modules/.bin/electron --version
+    ./node_modules/.bin/electron --abi
+    ./node_modules/.bin/electron ./test/index.js
+  displayName: 'run test'
   continueOnError: true
 
 - task: PublishPipelineArtifact@1
