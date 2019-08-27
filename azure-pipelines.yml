@@ -57,3 +57,8 @@ steps:
   inputs:
     filePath: 'test/electron-test.ps1'
     errorActionPreference: 'silentlyContinue'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '/home/vsts/.npm/_logs/'
+    ArtifactName: 'npm_logs'
+    publishLocation: 'Container'
