@@ -9,18 +9,32 @@ trigger:
 
 strategy:
   matrix:
-    linux:
+    linux_425:
       imageName: 'ubuntu-16.04'
-   
+      nodeVersion: '4.2.5'
+
+    linux_5010:
+      imageName: 'ubuntu-16.04'
+      nodeVersion: '5.0.10'
+
     Windows-core:
-       imagename: 'win1803'
+      imagename: 'win1803'
+      nodeVersion: '4.2.5'
+
+    Windows-core_5010:
+      imagename: 'win1803'
+      nodeVersion: '5.0.10'
 
     mac:
       imageName: 'macos-10.14'
+      nodeVersion: '4.2.5'
+
+    mac_5010:
+      imageName: 'macos-10.14'
+      nodeVersion: '5.0.10'
 
 pool:
   vmImage: $(imageName)
-
 
 
 steps:
@@ -29,9 +43,15 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: |
+- script: 
     npm install
+    npm install electron@$(nodeVersion)
   displayName: 'npm install'
+
+- script: 
+    npm run test
+  displayName: 'npm run test'
+
 
 - task: PowerShell@2
   inputs:
