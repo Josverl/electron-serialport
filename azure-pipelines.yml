@@ -48,12 +48,12 @@ steps:
     npm install electron@$(nodeVersion)
   displayName: 'npm install'
 
-- script: 
-    npm run test
-  displayName: 'npm run test'
+- script: |
+    npm install
+  displayName: 'npm install'
+  continueOnError: true
 
-
-- task: PowerShell@2
+- task: PublishPipelineArtifact@1
   inputs:
-    filePath: 'test/electron-test.ps1'
-    errorActionPreference: 'silentlyContinue'
+    targetPath: '/home/vsts/.npm/_logs/'
+    artifact: 'npm_logs'
