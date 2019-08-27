@@ -6,6 +6,15 @@
 # {runtime: 'electron', target: '6.0.0', abi: '73', lts: false}
 # https://github.com/lgeiger/node-abi/blob/master/index.js
 
+# on WSL - ubunto :
+# sudo apt install build-essential clang libdbus-1-dev libgtk2.0-dev \
+#                        libnotify-dev libgnome-keyring-dev libgconf2-dev \
+#                        libasound2-dev libcap-dev libcups2-dev libxtst-dev \
+#                        libxss1 gcc-multilib g++-multilib
+#                        libxss1 libnss3-dev gcc-multilib g++-multilib
+
+
+
 foreach ($version in '4.2.5','5.0.10') {
     write-host "get ready to test on electron $version"
     # make sure  node_folders is empty 
