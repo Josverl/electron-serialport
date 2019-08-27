@@ -1,13 +1,4 @@
-node_modules/*
-
-!node_modules/serialport/**
-
-!node_modules/@serialport/**
-
-!node_modules/sqlite3
-
-!node_modules/bindings/**
-
+node_modules
 copies
 
 

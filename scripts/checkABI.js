@@ -1,6 +1,12 @@
+// verify the ABI version of compiled native modules
+// Copyright (c) 2019 Jos Verlinde - jos_verlinde@hotmail.com
+// License : MIT
+
 const os = require('os');
 const fs = require('fs');
 const path = require('path');
+
+var myArgs = process.argv.slice(2);
 
 /// dummy copy of  internal function
 function Module(id, parent) {
@@ -62,8 +68,14 @@ const walkSync = (dir, filelist = []) => {
 
 var abi = 0
 var filename
+var folder = '.'
 
-var natives = walkSync("native_modules");
+if ( myArgs.length > 0 ) { 
+    folder = myArgs[0]    
+}
+console.log('scanning folder ', folder);
+
+var natives = walkSync(folder);
 natives.forEach(filename => {
     if ( filename.endsWith('.node')){
         abi = getNativeABI(filename)
