@@ -24,15 +24,16 @@ foreach ($version in '4.2.5','5.0.10') {
 
     write-host "&npx electron --version"
     #sanity check
-    &npx electron --version
+    # &npx electron --version
+    npm run version
     # also make sure that the native modules are in place for the test 
     ./scripts/mp-download.ps1 -copyonly
     # use a version of bidings that provides some more output on what is loaded 
 
     copy-item test/bindings/bindings.js node_modules/bindings/bindings.js -force -Verbose
     write-host "run test app" 
-    &npx electron test/index.js
-
+    # &npx electron test/index.js
+    npm run test
 }
 
 #todo: use nvm to switch between 32 / 64 bit on wnidows
