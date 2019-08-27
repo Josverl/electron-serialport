@@ -19,17 +19,19 @@ foreach ($version in '4.2.5','5.0.10') {
     write-host "get ready to test on electron $version"
     # make sure  node_folders is empty 
     Remove-Item ./node_modules/* -Recurse -Force -ErrorAction SilentlyContinue
-    npm install
+    #npm install
     npm install electron@$version
 
+    write-host "&npx electron --version"
     #sanity check
-    npx electron --version
+    &npx electron --version
     # also make sure that the native modules are in place for the test 
-    scripts/mp-download.ps1 -copyonly
+    ./scripts/mp-download.ps1 -copyonly
     # use a version of bidings that provides some more output on what is loaded 
-    copy-item test/bindings/bindings.js node_modules/bindings/bindings.js -force 
-    #run test app 
-    npx electron test/index.js
+
+    copy-item test/bindings/bindings.js node_modules/bindings/bindings.js -force -Verbose
+    write-host "run test app" 
+    &npx electron test/index.js
 
 }
 
