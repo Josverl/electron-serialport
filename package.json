@@ -23,8 +23,8 @@
     "author": "GitHub",
     "license": "CC0-1.0",
     "devDependencies": {
-        "electron": "^5.0.10",
-        "electron-rebuild": "^1.8.5",
+        "electron": "^6.1.2",
+        "electron-rebuild": "^1.8.6",
         "node-abi": "^2.11.0"
     },
     "dependencies": {
